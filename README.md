@@ -1,5 +1,5 @@
 # pytorch_rocm_notes
-Notes on building pytorch on a fresh ubuntu 22.04 server install for Radeon RX 5700 XT
+Notes on building pytorch on a fresh ubuntu 22.04 server install for Radeon RX 5700 XT (currently flawed)
 
 Stealing time on my son's gaming rig from the beginning of the pandemic to test out some Machine Learning algorithms on the AMD GPU. Pretty much I want to get this working because it's more dormant now that he's got a steam deck.
 
@@ -88,4 +88,12 @@ export TORCH_COMMAND="pip install ~/torch-2.1.0a0+git4882cd0-cp310-cp310-linux_x
 Then start the webui
 ```bash
 bash webui.sh
+```
+
+After that it dumps core after cross attention optimization so I'm still working on making this a functioning howto.
+```
+LatentDiffusion: Running in eps-prediction mode
+DiffusionWrapper has 859.52 M params.
+Applying cross attention optimization (Doggettx).
+Segmentation fault (core dumped)
 ```

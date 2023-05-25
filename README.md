@@ -54,7 +54,10 @@ index 6138955342a..4bfce2a4f27 100644
 
 Build pytorch (takes a while)
 ```bash
-PYTORCH_ROCM_ARCH=gfx1010 python setup.py bdist_wheel
+export AMDGPU_TARGETS="gfx1010"
+export HSA_OVERRIDE_GFX_VERSION="10.3.0"
+export PYTORCH_ROCM_ARCH="gfx1010" 
+python setup.py bdist_wheel
 ```
 
 Copy the wheel file off and install it for building torchvision

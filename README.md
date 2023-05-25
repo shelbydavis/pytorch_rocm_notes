@@ -29,6 +29,7 @@ Install dependencies, set up virtual environment, clone git repos, install more 
 sudo apt-get install python3.10-venv python3.10-dev libstdc++-12-dev libjpeg-dev libpng-dev
 python3 -m venv pytorch-build
 source pytorch-build/bin/activate
+pip install --upgrade setuptools pip wheel
 pip install cmake ninja
 git clone --recursive https://github.com/pytorch/pytorch.git 
 cd pytorch 
